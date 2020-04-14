@@ -1,0 +1,36 @@
+{
+    "name": "@colbycommunications/colby-modal",
+    "version": "1.0.0",
+    "description": "A react component for bootstrap modal component",
+    "main": "dist/index.js",
+    "author": "Brandon K. Waltz",
+    "license": "MIT",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+    },
+    "scripts": {
+        "build": "colby-package-build",
+        "build:watch": "colby-package-build --watch --verbose",
+        "lint": "colby-package-lint",
+        "format": "colby-package-format",
+        "test": "colby-package-test --watch",
+        "check": "colby-package-lint && colby-package-test",
+        "prepublishOnly": "colby-package-registry && npm run check && colby-package-build"
+    },
+    "devDependencies": {
+        "@colbycommunications/colby-package": "^2.2.3"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "colby-package-format -s && colby-package-lint -s && colby-package-test -s"
+        }
+    },
+    "dependencies": {
+        "@colbycommunications/colby-loader": "^2.0.2",
+        "jquery": "^3.5.0",
+        "prop-types": "^15.7.2",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "react-modal": "^3.11.2"
+    }
+}

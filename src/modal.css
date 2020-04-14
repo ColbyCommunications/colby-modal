@@ -1,0 +1,40 @@
+:global {
+    .Modal__Bootstrap {
+        outline: 0;
+    }
+    .ReactModal__Overlay {
+        perspective: 600;
+        opacity: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .ReactModal__Overlay--after-open {
+        opacity: 1;
+        transition: opacity 150ms ease-out;
+    }
+
+    .ReactModal__Content {
+        transform: translateY(-400px);
+    }
+
+    .ReactModal__Content--after-open {
+        transform: translateY(0);
+        transition: all 150ms ease-in;
+    }
+
+    .ReactModal__Overlay--before-close {
+        opacity: 0;
+    }
+
+    .ReactModal__Content--before-close {
+        transform: translateY(-400px);
+        transition: all 150ms ease-in;
+    }
+
+    .ReactModal__Content.modal-dialog {
+        border: none;
+        background-color: transparent;
+    }
+}
