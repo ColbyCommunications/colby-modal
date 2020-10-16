@@ -18,6 +18,7 @@ A react component to show a bootstrap modal.
 | headerStyle   | Style of the modal header.                                                                                            | object   | {}            |
 | bodyStyle     | Style of the modal body.                                                                                              | object   | {}            |
 | formAutoFocus | Will focus on the first field of a form when true.                                                                    | bool     | false         |
+| scrollable    | Creates internal scroll bar for modal                                                                                 | bool     | false         |
 
 ## Usage
 
